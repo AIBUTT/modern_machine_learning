@@ -142,3 +142,6 @@ help:
 		printf "\n"; \
 	}' \
 	| more $(shell test $(shell uname) = Darwin && echo '--no-init --raw-control-chars')
+
+create_mnist_dataset:
+	$(PYTHON_INTERPRETER) src/data/make_mnist_dataset.py "/Users/aibutt/PYTHON_PROJECTS/modern_machine_learning/data/external/"	
