@@ -27,7 +27,7 @@ def save_mnist_dataset(str: DATA_PATH):
     df = fetch_mnist_dataset()
     filename = "MNIST_784.csv"
     filepath = PurePath(DATA_PATH, filename)
-    df.to_csv(filepath)
+    df.to_csv(filepath, index=False)
     return print("MNIST Dataset has been saved to {} location".format(filepath))
 
 
